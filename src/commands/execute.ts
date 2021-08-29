@@ -85,7 +85,7 @@ function messageRoleToSpeakeInVoiceChannel(message: any) {
 function messageInAnotherVoiceChannel(message: any) {
   const anotherVoiceChannel = new Discord.MessageEmbed()
     .setColor(`#ffbb3b`)
-    .setTitle(`🎙️ Guayana ya esta en otro canal de voz 🎙️`);
+    .setTitle(`🎙️ Guayando ya esta en otro canal de voz 🎙️`);
   return message.channel.send(anotherVoiceChannel);
 }
 
