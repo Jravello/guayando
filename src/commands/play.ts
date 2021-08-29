@@ -36,7 +36,7 @@ export function play(guild, song) {
 function messageErrorAndStop(serverQueue: any) {
   const error = new Discord.MessageEmbed()
     .setColor(`#ffbb3b`)
-    .setTitle(`🛡️ Se detuvo bot Guayana 🛡️`);
+    .setTitle(`🛡️ Se detuvo bot Guayando 🛡️`);
   return serverQueue.textChannel.send(error);
 }
 
