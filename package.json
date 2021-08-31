@@ -14,7 +14,6 @@
     "ffmpeg-static": "^4.4.0",
     "fluent-ffmpeg": "^2.1.2",
     "inversify": "^5.1.1",
-    "node-opus": "^0.3.3",
     "nodemon": "^2.0.12",
     "reflect-metadata": "^0.1.13",
     "spotify-url-info": "^2.2.3",

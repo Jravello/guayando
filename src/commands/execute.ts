@@ -82,7 +82,7 @@ function messageRoleToSpeakeInVoiceChannel(message: any) {
   return message.channel.send(errorSpeak);
 }
 
-function messageInAnotherVoiceChannel(message: any) {
+export function messageInAnotherVoiceChannel(message: any) {
   const anotherVoiceChannel = new Discord.MessageEmbed()
     .setColor(`#ffbb3b`)
     .setTitle(`🎙️ Guayando ya esta en otro canal de voz 🎙️`);

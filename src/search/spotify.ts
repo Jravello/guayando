@@ -23,11 +23,13 @@ export async function searchTypeSpotify(
       .setColor(`#0099ff`)
       .setDescription(`🎶 Se buscaran las canciones de la Playlist...🎶`);
     message.channel.send(searchEmbed);
+    console.log("Cantidad de canciones =>",items.length)
     await Promise.all(
-      items.map(async (item) => {
+      items.map(async (item,ind) => {
         const song = item.track.name;
         const search = await searchByUrlAndNameSong(song);
-        video.push(search);
+        console.log(ind+1)
+        songs.push(search);
       })
     );
     video.push(...songs);
@@ -49,6 +51,7 @@ export async function searchTypeSpotify(
       items.map(async (item) => {
         const song = `${item.name} - ${title}`;
         const search = await searchByUrlAndNameSong(song);
+        console.log("2" ,search)
         songs.push(search);
       })
     );

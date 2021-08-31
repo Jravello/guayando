@@ -60,11 +60,20 @@ client.on('message', async (message) => {
   const args = message.content.slice(prefix.length).split(/ +/);
   const command = args.shift().toLocaleLowerCase();
   const serverQueue = queue.get(message.guild.id);
-
   if (command === 'leave' || command === 'l') {
     leave(message, serverQueue);
-  } else if (command === 'play' || command === 'p') { 
-    execute(message, serverQueue, args);
+  } else if (command === 'play' || command === 'p') {
+    if (args.length == 0) {
+      const invalidArgCommandEmbed = new Discord.MessageEmbed()
+        .setColor(`#6600cd`)
+        .setTitle(`🛡️ El argumento en el comando ingresado es invalido 🛡️`)
+        .setDescription(
+          `Escribe *-<help* | *-<h* para ver los comandos y su descripcion`
+        );
+      return message.channel.send(invalidArgCommandEmbed);
+    } else {
+      execute(message, serverQueue, args);
+    }
   } else if (command === 'skip' || command === 's') {
     skip(message, serverQueue);
   } else if (command === 'stop' || command === 'st') {
