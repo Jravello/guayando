@@ -30,6 +30,8 @@ export function validatorArgument(arg) {
       } else {
         return typesOfArgs.invalid;
       }
+    }else if (arg.includes('youtu.be')) {
+        return typesOfArgs.name;
     } else {
       return typesOfArgs.invalid;
     }
